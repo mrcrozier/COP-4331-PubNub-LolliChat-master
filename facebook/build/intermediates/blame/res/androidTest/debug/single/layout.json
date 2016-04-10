@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/com_facebook_activity_layout.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_blue_small.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_blue_round.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_white_small.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/com_facebook_tooltip_bubble.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/com_facebook_login_fragment.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_blue_large.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_white_large.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/res/merged/androidTest/debug/layout/messenger_button_send_white_round.xml",
+        "source": "/Users/Arjun/Documents/COP4331/COP-4331-PubNub-LolliChat-master/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_white_round.xml"
+    }
+]

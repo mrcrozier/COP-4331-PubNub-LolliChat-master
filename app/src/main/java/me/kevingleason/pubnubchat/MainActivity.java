@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -45,8 +46,6 @@ import java.util.Set;
 import me.kevingleason.pubnubchat.adt.ChatMessage;
 import me.kevingleason.pubnubchat.callbacks.BasicCallback;
 
-//Facebook import SDK - Arjun 4/2 2pm
-import com.facebook.FacebookSdk;
 /**
  * Main Activity is where all the magic happens. To keep this demo simple I did not use fragment
  *   views, simply a ListView that is populated by a custom adapter, ChatAdapter. If you want to
@@ -68,17 +67,26 @@ public class MainActivity extends ListActivity {
     private SharedPreferences mSharedPrefs;
 
     private String username;
-    private String channel  = "MainChat";
+    public static String channel = "init";
 
     private GoogleCloudMessaging gcm;
     private String gcmRegId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // This solves a weird bug I was having when login was remembered.
+        // It would skip LoginActivity and go to MainActivity instead of ChannelActivity.
+        // This just reroutes to ChannelActivity if it was skipped.
+        if(channel == "init")
+        {
+            Intent intent = new Intent(this, ChannelActivity.class);
+            startActivity(intent);
+        }
+
         super.onCreate(savedInstanceState);
-        //Facebook SDK initialization - Arjun 4/2 2pm
-        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        FacebookSdk.sdkInitialize(getApplicationContext());
 
         mSharedPrefs = getSharedPreferences(Constants.CHAT_PREFS, MODE_PRIVATE);
         if (!mSharedPrefs.contains(Constants.CHAT_USERNAME)){
@@ -160,22 +168,6 @@ public class MainActivity extends ListActivity {
         super.onStop();
         if (this.mPubNub != null)
             this.mPubNub.unsubscribeAll();
-    }
-
-    @Override       //FACEBOOK ARJUN 4/2 - LOGS APP ACTIVATION EVENT
-    protected void onResume() {
-        super.onResume();
-
-        // Logs 'install' and 'app activate' App Events.
-        //AppEventsLogger.activateApp(this);
-    }
-
-    @Override       //FACEBOOK ARJUN 4/2 - LOGS TIME PEOPLE SPEND IN APP
-    protected void onPause() {
-        super.onPause();
-
-        // Logs 'app deactivate' App Event.
-        //AppEventsLogger.deactivateApp(this);
     }
 
     /**
@@ -714,5 +706,12 @@ public class MainActivity extends ListActivity {
             }
             return null;
         }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(this, ChannelActivity.class);
+        startActivity(intent);
     }
 }
