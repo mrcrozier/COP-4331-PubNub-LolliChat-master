@@ -92,9 +92,9 @@ public class LoginActivity extends Activity {
                                 edit.apply();
                                 loginButton.setVisibility(View.INVISIBLE);
                                 //Intent intent = new Intent("me.kevingleason.pubnubchat.MainActivity");
-                                Intent intent = new Intent(null, ChannelActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, ChannelActivity.class);
                                 startActivity(intent);
-                                //finish();
+                                finish();
 
                             }
                         });
@@ -134,7 +134,7 @@ public class LoginActivity extends Activity {
         accessToken = AccessToken.getCurrentAccessToken();
         // If already logged in show the home view
         if (accessToken != null) {//<- IMPORTANT
-            Intent intent = new Intent(null, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
             finish();//<- IMPORTANT
         }
